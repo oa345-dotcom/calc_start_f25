@@ -14,9 +14,11 @@ def test_multiply():
 
 def test_divide():
     assert divide(6, 3) == 2
+
     try:
         divide(5, 0)
     except ValueError as e:
         assert str(e) == "Cannot divide by zero."
+
     else:
         assert False, "Expected ValueError for division by zero"
